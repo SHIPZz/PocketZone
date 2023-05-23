@@ -3,15 +3,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour, IDamagaeble
 {
-    public  IHealth Health { get; set; }
+    private IHealth _health;
 
-    private void Start()
+    private void Awake()
     {
-        print("Хп игрока" + Health.CurrentValue);
+        _health = new Health(Constant.PlayerHealth);
+        print("Хп врага" + _health.CurrentValue);
     }
 
     public void TakeDamage(int damage)
     {
-        Health.Decrease(damage);
+        _health.Decrease(damage);
     }
 }

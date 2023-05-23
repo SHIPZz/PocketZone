@@ -2405,7 +2405,6 @@ MonoBehaviour:
   _bulletPrefab: {fileID: 2620898895479774607, guid: 94f5337c0e5f1244fae72f9a2ee82950, type: 3}
   _bulletsCount: 5
   _shootPoint: {fileID: 524804186}
-  _fireRate: 0.1
   _bulletSpeed: 10
 --- !u!1 &1425942152
 GameObject:
@@ -2436,8 +2435,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75de8ea2932a4b1eaec9bec03ef6139f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1543430836}
-  _enemy: {fileID: 1286499653}
 --- !u!4 &1425942154
 Transform:
   m_ObjectHideFlags: 0
@@ -2465,6 +2462,7 @@ GameObject:
   - component: {fileID: 1543430834}
   - component: {fileID: 1543430835}
   - component: {fileID: 1543430836}
+  - component: {fileID: 1543430837}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2547,6 +2545,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb3ed432e506e914aa9f8334d939db57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1543430837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543430832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16750f787dfdfca4cb688b59eea9d160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weapon: {fileID: 1310506399}
+  _fireRate: 0.1
 --- !u!1 &1616777854
 GameObject:
   m_ObjectHideFlags: 0

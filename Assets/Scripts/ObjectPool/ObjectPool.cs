@@ -27,6 +27,8 @@ public class ObjectPool<T>
 
     public GameObject Get()
     {
+        Debug.Log(_bullets.Count);
+        
         if (_bullets.Count <= 0)
         {
             Debug.LogWarning("Нет доступных пуль в пуле.");
@@ -36,6 +38,7 @@ public class ObjectPool<T>
         var bullet = _bullets.Dequeue();
         bullet.SetActive(true);
 
+        Debug.Log(_bullets.Count);
         return bullet;
     }
 

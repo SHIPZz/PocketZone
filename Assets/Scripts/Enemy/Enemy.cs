@@ -1,17 +1,31 @@
+using System;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour, IDamagaeble
 {
-    public IHealth Health { get; set; }
+    private IHealth _health;
 
-    private void Start()
+    private void Awake()
     {
-        print("Хп врага" + Health.CurrentValue);
+        _health = new Health(Constant.EnemyHealth);
+        print("Хп врага" + _health.CurrentValue);
     }
-    
+
+    private void OnEnable()
+    {
+        _health.ValueZeroReached += Destroy;
+    }
+
+    private void OnDisable()
+    {
+        _health.ValueZeroReached -= Destroy;
+    }
+
     public void TakeDamage(int damage)
     {
-        Health.Decrease(damage);
-        print(Health.CurrentValue);
+        _health.Decrease(damage);
     }
+
+    private void Destroy() =>
+        Destroy(gameObject);
 }
