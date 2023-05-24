@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using Gameplay.IDamageable;
 using Services.DependencyContainer;
 using Services.ObjectPool;
 using Services.ObjectPoolsAccess;

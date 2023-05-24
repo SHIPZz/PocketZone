@@ -20,16 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bbaaaed-bb7f-4dca-a77a-1492f9aa158c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/IDamageable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PocketZone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PocketZone/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PocketZone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PocketZone/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullet/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullet/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/IDamageable.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/IDamageable/IDamagaeble.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/IDamageable/IDamagaeble.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/IDamageable.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player/PlayerAttacker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player/PlayerAttacker.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +65,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Weapon/Pistol.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Constant/Constant.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Weapon/Weapon.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullet/Bullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Weapon/AK.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullet/BulletMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/InputService/InputService.cs" />
@@ -89,6 +79,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/IDamagaeble.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player/PlayerAttacker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Enemy/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullet/Bullet.cs" />
       </list>
     </option>
   </component>
@@ -144,7 +135,7 @@
       <workItem from="1684868293085" duration="12129000" />
       <workItem from="1684887555495" duration="4627000" />
       <workItem from="1684929499701" duration="4697000" />
-      <workItem from="1684937306272" duration="18975000" />
+      <workItem from="1684937306272" duration="19006000" />
     </task>
     <servers />
   </component>
