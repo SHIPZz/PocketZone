@@ -1,10 +1,9 @@
 using Gameplay.Health;
-using Gameplay.IDamageable;
 using UnityEngine;
 
 namespace Gameplay.Enemy
 {
-    public class Enemy : MonoBehaviour, IDamagaeble
+    public class Enemy : MonoBehaviour, IDamageable
     {
         private IHealth _health;
 

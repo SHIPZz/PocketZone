@@ -17,7 +17,7 @@ namespace Gameplay.Player
             _radius = cirlceCollider2D.radius;
             cirlceCollider2D.enabled = false;
         }
-
+        
         private void Update()
         {
             Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, _radius, _layerMask);

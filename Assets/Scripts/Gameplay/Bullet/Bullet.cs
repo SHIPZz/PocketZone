@@ -24,7 +24,7 @@ namespace Gameplay.Bullet
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.gameObject.TryGetComponent(out IDamagaeble damagaeble))
+            if (collision.gameObject.TryGetComponent(out IDamageable damagaeble))
             {
                 damagaeble.TakeDamage(_damage);
             }

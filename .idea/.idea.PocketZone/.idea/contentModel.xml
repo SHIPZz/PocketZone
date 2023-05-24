@@ -157,9 +157,7 @@
               <e p="Health.cs" t="Include" />
               <e p="IHealth.cs" t="Include" />
             </e>
-            <e p="IDamageable" t="Include">
-              <e p="IDamagaeble.cs" t="Include" />
-            </e>
+            <e p="IDamageable.cs" t="Include" />
             <e p="Player" t="Include">
               <e p="Player.cs" t="Include" />
               <e p="PlayerAttacker.cs" t="Include" />

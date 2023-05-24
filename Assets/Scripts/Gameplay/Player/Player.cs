@@ -1,10 +1,9 @@
 using Gameplay.Health;
-using Gameplay.IDamageable;
 using UnityEngine;
 
 namespace Gameplay.Player
 {
-    public class Player : MonoBehaviour, IDamagaeble
+    public class Player : MonoBehaviour, IDamageable
     {
         private IHealth _health;
 
