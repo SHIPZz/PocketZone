@@ -20,20 +20,272 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bbaaaed-bb7f-4dca-a77a-1492f9aa158c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInput.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Credits.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Credits.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Editor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Editor/AxisInputDrawer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Editor/AxisInputDrawer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Editor/BaseInputDrawer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Editor/BaseInputDrawer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Editor/ButtonInputDrawer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Editor/ButtonInputDrawer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Editor/KeyInputDrawer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Editor/KeyInputDrawer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Editor/MouseButtonInputDrawer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Editor/MouseButtonInputDrawer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Editor/SimpleInput.Editor.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Editor/SimpleInput.Editor.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Example.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Example/BouncyMat.physicMaterial" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Example/BouncyMat.physicMaterial.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Example/EnvironmentMat.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Example/EnvironmentMat.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Example/ExamplePlayerController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Example/ExamplePlayerController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Example/ExampleScene.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Example/ExampleScene.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Example/GlassesMat.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Example/GlassesMat.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Example/PlayerMat.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Example/PlayerMat.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/ExtraResources.unitypackage.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Prefabs/ArrowsAllDirections.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Prefabs/ArrowsAllDirections.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Prefabs/ArrowsHorizontal.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Prefabs/ArrowsHorizontal.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Prefabs/ArrowsVertical.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Prefabs/ArrowsVertical.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Prefabs/DpadMultiplePieces.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Prefabs/DpadMultiplePieces.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Prefabs/DpadOnePiece.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Prefabs/DpadOnePiece.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Prefabs/Joystick.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Prefabs/Joystick.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Prefabs/SteeringWheel.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Prefabs/SteeringWheel.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/README.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs/AxisInputKeyboard.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs/AxisInputKeyboard.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs/AxisInputMouse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs/AxisInputMouse.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs/AxisInputMoveGesture.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs/AxisInputMoveGesture.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs/AxisInputPinchGesture.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs/AxisInputPinchGesture.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs/AxisInputRotateGesture.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs/AxisInputRotateGesture.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs/AxisInputSwipeGesture.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs/AxisInputSwipeGesture.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs/AxisInputUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs/AxisInputUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs/AxisInputUIArrows.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs/AxisInputUIArrows.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs/Dpad.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs/Dpad.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs/Joystick.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs/Joystick.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs/SteeringWheel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs/SteeringWheel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs/Touchpad.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/AxisInputs/Touchpad.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/ButtonInputs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/ButtonInputs/ButtonInputKeyboard.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/ButtonInputs/ButtonInputKeyboard.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/ButtonInputs/ButtonInputSwipeGesture.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/ButtonInputs/ButtonInputSwipeGesture.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/ButtonInputs/ButtonInputUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/ButtonInputs/ButtonInputUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/Core.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/Core/BaseInput.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/Core/BaseInput.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/Core/ISimpleInputDraggable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/Core/ISimpleInputDraggable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/Core/ISimpleInputDraggableMultiTouch.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/Core/ISimpleInputDraggableMultiTouch.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/Core/NonDrawingGraphic.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/Core/NonDrawingGraphic.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/Core/SelectivePointerInput.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/Core/SelectivePointerInput.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/Core/SimpleInputDragListener.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/Core/SimpleInputDragListener.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/Core/SimpleInputMultiDragListener.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/Core/SimpleInputMultiDragListener.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/Core/SimpleInputUtils.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/Core/SimpleInputUtils.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/Core/SwipeGestureBase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/Core/SwipeGestureBase.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/Core/UnityInputProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/Core/UnityInputProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/KeyInputs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/KeyInputs/KeyInputKeyboard.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/KeyInputs/KeyInputKeyboard.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/KeyInputs/KeyInputSwipeGesture.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/KeyInputs/KeyInputSwipeGesture.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/KeyInputs/KeyInputUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/KeyInputs/KeyInputUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/MouseButtonInputs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/MouseButtonInputs/MouseButtonInputKeyboard.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/MouseButtonInputs/MouseButtonInputKeyboard.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/MouseButtonInputs/MouseButtonInputSwipeGesture.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/MouseButtonInputs/MouseButtonInputSwipeGesture.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/MouseButtonInputs/MouseButtonInputUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/MouseButtonInputs/MouseButtonInputUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/SimpleInput.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/SimpleInput.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/SimpleInputHelper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Scripts/SimpleInputHelper.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/SimpleInput.Runtime.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/SimpleInput.Runtime.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/FlatDark.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/FlatDark/Joystick.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/FlatDark/Joystick/flatDark00.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/FlatDark/Joystick/flatDark00.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/FlatDark/flatDark06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/FlatDark/flatDark06.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/FlatLight.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/FlatLight/Arrows.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/FlatLight/Arrows/flatLight22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/FlatLight/Arrows/flatLight22.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/FlatLight/Arrows/flatLight23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/FlatLight/Arrows/flatLight23.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/OtherSprites.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/OtherSprites/SteeringWheel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/OtherSprites/SteeringWheel.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedDark.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedDark/Arrows.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedDark/Arrows/shadedDark24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedDark/Arrows/shadedDark24.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedDark/Arrows/shadedDark25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedDark/Arrows/shadedDark25.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedDark/Arrows/shadedDark26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedDark/Arrows/shadedDark26.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedDark/Arrows/shadedDark27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedDark/Arrows/shadedDark27.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedDark/Buttons.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedDark/Buttons/shadedDark00.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedDark/Buttons/shadedDark00.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedDark/Buttons/shadedDark36.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedDark/Buttons/shadedDark36.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedDark/Buttons/shadedDark45.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedDark/Buttons/shadedDark45.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedDark/DpadOnePiece.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedDark/DpadOnePiece/shadedDark04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedDark/DpadOnePiece/shadedDark04.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedDark/shadedDark11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedDark/shadedDark11.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedLight.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedLight/DpadMultiplePieces.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedLight/DpadMultiplePieces/shadedLight03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedLight/DpadMultiplePieces/shadedLight03.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedLight/DpadMultiplePieces/shadedLight05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedLight/DpadMultiplePieces/shadedLight05.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedLight/DpadMultiplePieces/shadedLight06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedLight/DpadMultiplePieces/shadedLight06.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedLight/DpadMultiplePieces/shadedLight10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/ShadedLight/DpadMultiplePieces/shadedLight10.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/TransparentDark.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/TransparentDark/Arrows.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/TransparentDark/Arrows/transparentDark24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/TransparentDark/Arrows/transparentDark24.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/TransparentDark/Arrows/transparentDark25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/Sprites/TransparentDark/Arrows/transparentDark25.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Bullet.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Bullet.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Constant/AssetPath.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Constant/AssetPath.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Extensions.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullet/BulletMovement.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player/PlayerAttacker.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player/PlayerAttacker.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player/PlayerInput.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player/PlayerMovement.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player/PlayerMovement.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Weapon/AK.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Weapon/Pistol.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Weapon/Pistol.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Weapon/Weapon.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services/BulletFactory.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services/BulletFactory/BulletFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services/BulletFactory/BulletFactory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services/DependencyContainer/DependencyRegister.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services/IUpdateable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services/IUpdateable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services/InputService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services/InputService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services/ObjectPool/GameObjectPool.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services/ObjectPoolsAccess.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services/ObjectPoolsAccess/ObjectPoolsAccess.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services/ObjectPoolsAccess/ObjectPoolsAccess.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PocketZone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PocketZone/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PocketZone/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PocketZone/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PocketZone/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PocketZone/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PocketZone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PocketZone/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ModelResources/PocketZone/tilemap/celianna_TileA2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ModelResources/PocketZone/tilemap/celianna_TileA2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Bullet.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Bullet.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullet/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullet.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullet/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet/Bullet.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullet/Bullet.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet/BulletMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/GameFactory/GameFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet/BulletMovement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullet/BulletMovement.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Constant/Constant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Constant/Constant.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DependencyContainer.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/DependencyContainer.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DependencyContainer/DependencyContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/DependencyContainer/ServiceLocator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DependencyContainer/DependencyContainer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/DependencyContainer/ServiceLocator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DependencyContainer/DependencyRegister.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DependencyContainer/DependencyRegister.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/DependencyContainer/DependencyRegister.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Enemy.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Enemy/Enemy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyDestruction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Enemy/EnemyDestruction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyDestruction.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Enemy/EnemyDestruction.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameFactory.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/GameFactory.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameFactory/GameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Weapon/AK.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameFactory/GameFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/GameFactory/GameFactory.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameInit/GameInit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameInit/GameInit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Health/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Health/Health.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Health/IHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Health/IHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectPool/ObjectPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectPool/ObjectPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Weapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameInit/GameInit.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameInit/GameInit.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameObjectExtension.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Extensions/GameObjectExtension.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameObjectExtension/GameObjectExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Extensions/GameObjectExtension/GameObjectExtension.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameObjectExtension/GameObjectExtension.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Extensions/GameObjectExtension/GameObjectExtension.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Health.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Health.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Health/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Health/Health.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Health/Health.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Health/Health.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Health/IHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Health/IHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Health/IHealth.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Health/IHealth.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IDamageable.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/IDamageable.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IDamageable/IDamagaeble.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/IDamageable/IDamagaeble.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IDamageable/IDamagaeble.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/IDamageable/IDamagaeble.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectPool.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/ObjectPool.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectPool/ObjectPool.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectPool/ObjectPool.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/ObjectPool/GameObjectPool.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player/Player.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInput.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player/PlayerInput.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ReturningBulletMediator.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/ReturningBulletMediator.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ReturningBulletMediator/ReturningBulletMediator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/ReturningBulletMediator/ReturningBulletMediator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ReturningBulletMediator/ReturningBulletMediator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/ReturningBulletMediator/ReturningBulletMediator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Weapon.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Weapon.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Weapon.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Weapon/Weapon.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,26 +296,53 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7C971034-553A-4412-AA7C-92428F46E2E5/d0/95819e05/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Constant/Constant.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DependencyContainer/DependencyContainer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DependencyContainer/DependencyRegister.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Player/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/DependencyContainer/ServiceLocator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/DependencyContainer/DependencyRegister.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/DependencyContainer/DependencyContainer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Constant/Constant.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DependencyContainer/DependencyRegister.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameInit/GameInit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Health/IHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Health/Health.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ReturningBulletMediator/ReturningBulletMediator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ObjectPool/ObjectPool.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Weapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bullet/BulletMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bullet/Bullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameFactory/GameFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Weapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BulletFactory/BulletFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Constant/AssetPath.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/BulletFactory/BulletFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ObjectPool/ObjectPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DependencyContainer/ServiceLocator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DependencyContainer/DependencyRegister.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Enemy/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ObjectPool/GameObjectPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/ObjectPoolsAccess/ObjectPoolsAccess.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/BulletFactory/BulletFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/ObjectPool/GameObjectPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player/PlayerInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Weapon/Pistol.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Constant/Constant.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Weapon/Weapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullet/Bullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Weapon/AK.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullet/BulletMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/InputService/InputService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameInit/GameInit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/IUpdateable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/DependencyContainer/DependencyRegister.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/InputService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/DependencyContainer/ServiceLocator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player/PlayerAttacker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Player/PlayerMovement.cs" />
       </list>
     </option>
   </component>
@@ -80,6 +359,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -112,7 +392,13 @@
       <updated>1684783878979</updated>
       <workItem from="1684783878980" duration="3521000" />
       <workItem from="1684789348774" duration="2295000" />
-      <workItem from="1684799320866" duration="2758000" />
+      <workItem from="1684799320866" duration="3037000" />
+      <workItem from="1684843155398" duration="2216000" />
+      <workItem from="1684849528950" duration="1347000" />
+      <workItem from="1684868293085" duration="12129000" />
+      <workItem from="1684887555495" duration="4627000" />
+      <workItem from="1684929499701" duration="4697000" />
+      <workItem from="1684937306272" duration="17296000" />
     </task>
     <servers />
   </component>
@@ -131,15 +417,44 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="794" y="232" key="RiderGenerateDialog" timestamp="1684960552769">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="794" y="232" key="RiderGenerateDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1684960552769" />
+    <state x="448" y="182" key="SettingsEditor" timestamp="1684872441353">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="448" y="182" key="SettingsEditor/0.0.1920.1032@0.0.1920.1032" timestamp="1684872441353" />
+    <state x="92" y="92" width="1736" height="848" key="VCS.FileHistoryDialog" timestamp="1684872226810">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="92" y="92" width="1736" height="848" key="VCS.FileHistoryDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1684872226810" />
+    <state x="576" y="283" key="Vcs.Push.Dialog.v2" timestamp="1684888284625">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="576" y="283" key="Vcs.Push.Dialog.v2/0.0.1920.1032@0.0.1920.1032" timestamp="1684888284625" />
     <state x="534" y="129" width="1200" height="792" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1684788915853">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="534" y="129" width="1200" height="792" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1684788915853" />
+    <state x="92" y="92" width="1736" height="848" key="dock-window-1" timestamp="1684880915929">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="92" y="92" width="1736" height="848" key="dock-window-1/0.0.1920.1032@0.0.1920.1032" timestamp="1684880915929" />
+    <state x="616" y="238" key="run.anything.popup" timestamp="1684939081921">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="616" y="238" key="run.anything.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1684939081921" />
+    <state x="610" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1684891093448">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="610" y="258" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1684891093448" />
   </component>
 </project>
