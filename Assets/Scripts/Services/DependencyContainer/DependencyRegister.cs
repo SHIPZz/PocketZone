@@ -10,6 +10,7 @@ namespace Services.DependencyContainer
         {
             ServiceLocator.Register(new ObjectPoolsAccess.ObjectPoolsAccess());
             ServiceLocator.Register(new BulletFactory.BulletFactory());
+            ServiceLocator.Register(new GameFactory.GameFactory());
             InputService inputService = new InputService();
             ServiceLocator.Register(inputService);
             _objects.Add(inputService);

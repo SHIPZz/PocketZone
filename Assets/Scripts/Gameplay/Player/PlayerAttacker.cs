@@ -1,4 +1,5 @@
 ﻿using System;
+using Services;
 using UnityEngine;
 
 namespace Gameplay.Player
@@ -7,40 +8,81 @@ namespace Gameplay.Player
     public class PlayerAttacker : MonoBehaviour
     {
         [SerializeField] private LayerMask _layerMask;
-        [SerializeField] private Transform _gun;
-        
+
+        private readonly int _maxAngle = 90;
+
+        private Weapon.Weapon _weapon;
         private float _radius;
-        
+        private PlayerInput _playerInput;
+        private Vector3 _direction;
+        private WeaponSelectorHandler _weaponSelectorHandler;
+
         private void Awake()
         {
             var cirlceCollider2D = GetComponent<CircleCollider2D>();
             _radius = cirlceCollider2D.radius;
             cirlceCollider2D.enabled = false;
         }
-        
+
+        private void OnEnable()
+        {
+            _weaponSelectorHandler.ChoosedWeapon += SetWeapon;
+            _playerInput.MouseClicked += OnMouseClicked;
+        }
+
+        private void OnDisable()
+        {
+            _playerInput.MouseClicked -= OnMouseClicked;
+            _weaponSelectorHandler.ChoosedWeapon -= SetWeapon;
+        }
+
         private void Update()
         {
+            if(_weapon == null)
+                return;
+            
             Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, _radius, _layerMask);
             
             foreach (var hitCollider in hitColliders)
             {
-                var direction = hitCollider.transform.position - _gun.position;
-                _gun.right = direction;
+                var direction = hitCollider.transform.position - _weapon.transform.position;
+                _weapon.transform.right = direction;
+                
+                
+                _direction = hitCollider.transform.position;
 
-                if (Mathf.Abs(Vector2.Angle(Vector2.right, _gun.right)) > 90)
+                if (Mathf.Abs(Vector2.Angle(Vector2.right, _weapon.transform.right)) > _maxAngle)
                 {
-                    _gun.localScale = new Vector3(1,-1,1);
+                    _weapon.transform.localScale = new Vector3(1,-1,1);
                 }
                 else
                 {
-                    _gun.localScale = Vector3.one;
+                    _weapon.transform.localScale = Vector3.one;
                 }
                 
                 return;
             }
 
-            _gun.localScale = Vector3.one;
-            _gun.right = Vector3.right;
+            _weapon.transform.localScale = Vector3.one;
+            _weapon.transform.right = Vector3.right;
+            _direction = Vector3.zero;
+        }
+
+        public void SetPlayerInput(PlayerInput playerInput) =>
+            _playerInput = playerInput;
+
+        public void SetWeapon(Weapon.Weapon weapon) =>
+            _weapon = weapon;
+
+        public void SetWeaponSelectorHandler(WeaponSelectorHandler weaponSelectorHandler) =>
+            _weaponSelectorHandler = weaponSelectorHandler;
+
+        private void OnMouseClicked()
+        {
+            if (_direction == Vector3.zero || _direction == Vector3.one)
+                return;
+
+            _weapon.Shoot(_direction);
         }
     }
 }

@@ -14,7 +14,9 @@
           <e p="PocketZone" t="Include">
             <e p="items" t="Include">
               <e p="оружие" t="Include" />
-              <e p="шмотки" t="Include" />
+              <e p="шмотки" t="Include">
+                <e p="Materials" t="Include" />
+              </e>
             </e>
             <e p="mutants" t="Include" />
             <e p="Player" t="Include" />
@@ -132,6 +134,7 @@
         </e>
         <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="AddItemToItemGroup.cs" t="Include" />
           <e p="Constant" t="Include">
             <e p="AssetPath.cs" t="Include" />
             <e p="Constant.cs" t="Include" />
@@ -151,6 +154,7 @@
             </e>
             <e p="Enemy" t="Include">
               <e p="Enemy.cs" t="Include" />
+              <e p="EnemyDeathMediator.cs" t="Include" />
               <e p="EnemyDestruction.cs" t="Include" />
             </e>
             <e p="Health" t="Include">
@@ -185,6 +189,7 @@
               <e p="GameFactory.cs" t="Include" />
             </e>
             <e p="InputService.cs" t="Include" />
+            <e p="ItemSpawnerHandler.cs" t="Include" />
             <e p="IUpdateable.cs" t="Include" />
             <e p="ObjectPool" t="Include">
               <e p="GameObjectPool.cs" t="Include" />
@@ -192,6 +197,49 @@
             <e p="ObjectPoolsAccess" t="Include">
               <e p="ObjectPoolsAccess.cs" t="Include" />
             </e>
+            <e p="ObjectSpawner.cs" t="Include" />
+            <e p="SpawnObjectTypeId.cs" t="Include" />
+            <e p="WeaponSelectorHandler.cs" t="Include" />
+          </e>
+          <e p="UI" t="Include">
+            <e p="InventoryManager.cs" t="Include" />
+            <e p="Item.cs" t="Include" />
+          </e>
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Documentation" t="Include" />
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="Fonts &amp; Materials" t="Include" />
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+            <e p="Sprite Assets" t="Include" />
+            <e p="Style Sheets" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+            <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+            <e p="TMP_Bitmap.shader" t="Include" />
+            <e p="TMP_SDF Overlay.shader" t="Include" />
+            <e p="TMP_SDF SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+            <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface.shader" t="Include" />
+            <e p="TMP_SDF.shader" t="Include" />
+            <e p="TMP_Sprite.shader" t="Include" />
+            <e p="TMPro.cginc" t="Include" />
+            <e p="TMPro_Mobile.cginc" t="Include" />
+            <e p="TMPro_Properties.cginc" t="Include" />
+            <e p="TMPro_Surface.cginc" t="Include" />
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+            <e p="EmojiOne.json" t="Include" />
           </e>
         </e>
         <e p="TilePalette" t="Include" />

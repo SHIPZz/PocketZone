@@ -1,19 +1,35 @@
+using System;
 using UnityEngine;
 
 namespace Gameplay.Enemy
 {
     public class EnemyDestruction : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
+        public event Action<Vector3> Destroyed;
+
+        private readonly float _delay = 0.1f;
         
+        private Enemy _enemy;
+
+        private void Awake()
+        {
+            _enemy = GetComponent<Enemy>();
         }
 
-        // Update is called once per frame
-        void Update()
+        private void OnEnable()
         {
-        
+            _enemy.Dead += Destroy;
+        }
+
+        private void OnDisable()
+        {
+            _enemy.Dead -= Destroy;
+        }
+
+        private void Destroy()
+        {
+            Destroyed?.Invoke(gameObject.transform.position);
+            Destroy(gameObject, _delay);
         }
     }
 }

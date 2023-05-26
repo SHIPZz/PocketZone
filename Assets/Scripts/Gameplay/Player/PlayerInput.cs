@@ -1,19 +1,28 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Gameplay.Player
 {
     public class PlayerInput : MonoBehaviour
     {
-        [SerializeField] private Weapon.Weapon _weapon;
+        [SerializeField] private Button _shootButton;
+        
+        public event Action MouseClicked;
 
-        private void Update()
+        private void OnEnable()
         {
-            if (Input.GetMouseButton(0))
-            {
-                Vector3 targetPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            
-                _weapon.Shoot(targetPoint);
-            }
+            _shootButton.onClick.AddListener(OnShootButtonClicked);
+        }
+        
+        private void OnDisable()
+        {
+            _shootButton.onClick.RemoveListener(OnShootButtonClicked);
+        }
+        
+        private void OnShootButtonClicked()
+        {
+            MouseClicked?.Invoke();
         }
     }
 }

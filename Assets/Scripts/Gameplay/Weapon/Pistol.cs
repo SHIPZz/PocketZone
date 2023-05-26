@@ -6,8 +6,6 @@ namespace Gameplay.Weapon
 {
     public class Pistol : Weapon
     {
-        private float _fireTimer;
-    
         private BulletFactory _bulletFactory;
 
         private void Start()

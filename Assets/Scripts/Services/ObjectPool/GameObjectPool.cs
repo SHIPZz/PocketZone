@@ -32,8 +32,6 @@ namespace Services.ObjectPool
 
             GameObject obj = _objects.Dequeue();
             obj.SetActive(true);
-        
-            Debug.Log(_count);
 
             return obj;
         }

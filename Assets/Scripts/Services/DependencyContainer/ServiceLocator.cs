@@ -8,14 +8,8 @@ namespace Services.DependencyContainer
     {
         private  static  Dictionary<Type, object> _values = new Dictionary<Type, object>();
 
-       static ServiceLocator()
-        {
-            Debug.Log("init");
-        }
-        
         public static void Register<T>(T t)
         {
-            Debug.Log(typeof(T));
             _values[typeof(T)] = t;
         }
 
@@ -23,6 +17,5 @@ namespace Services.DependencyContainer
         {
             return (T) _values[typeof(T)];
         }
-
     }
 }
