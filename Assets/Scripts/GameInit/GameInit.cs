@@ -4,6 +4,7 @@ using Gameplay.Weapon;
 using Services;
 using Services.DependencyContainer;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace GameInit
@@ -12,6 +13,8 @@ namespace GameInit
     {
         [SerializeField] private Player _player;
         [SerializeField] private WeaponSelectorHandler _weaponHandler;
+        [SerializeField] private AddingItemMediator _addingItemMediator; 
+        [SerializeField] private InventoryView _inventoryView;
 
         private PlayerAttacker _playerAttacker;
         private PlayerInput _playerInput;
@@ -23,7 +26,15 @@ namespace GameInit
 
             SetDependenciesForPlayer();
         }
-        
+
+        private void Start()
+        {
+            _addingItemMediator.SetPlayer(_player);
+            _addingItemMediator.SetInventoryManager(_inventoryView);
+
+            // _addingItemMediator.InventoryView = _inventoryView;
+        }
+
         private void Update()
         {
             _dependencyRegister.Update();

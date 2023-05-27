@@ -1,12 +1,12 @@
 
-public class Item
+public struct Item
 {
-    public  int Price { get; private set; }
-    public  string Name { get; private set; }
-
-    public Item(int price, string name)
+    public Item(string name, int price)
     {
-        Price = price;
         Name = name;
+        Price = price;
     }
+
+    public string Name { get; private set; }
+    public int Price { get; private set; }
 }

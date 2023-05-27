@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6265333095941178197}
   - component: {fileID: 6265333095941178194}
   - component: {fileID: 1007654266461785102}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SovietBag
   m_TagString: Untagged
   m_Icon: {fileID: 0}

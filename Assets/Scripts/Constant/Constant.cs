@@ -12,5 +12,6 @@ namespace Constant
         public const int PistolId = 1;
         public const int ZombieId = 1;
         public const int MutantId = 2;
+        public const int SovietBagLayer = 8;
     }
 }

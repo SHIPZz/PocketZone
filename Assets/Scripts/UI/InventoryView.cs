@@ -1,14 +1,13 @@
-﻿using UnityEngine;
+﻿using UI;
+using UnityEngine;
 using UnityEngine.UI;
 
-public class InventoryManager : MonoBehaviour
+public class InventoryView : MonoBehaviour
 {
     [SerializeField] private GameObject _itemGroupPrefab;
-    [SerializeField] private GameObject _itemPrefab;
-    [SerializeField] private Button _button;
 
-    private int _itemsPerGroup = 7;
-
+    private readonly int _itemsPerGroup = 7;
+    
     private GameObject _scrollView;
     private GameObject _content;
     private GameObject _currentGroup;
@@ -21,20 +20,8 @@ public class InventoryManager : MonoBehaviour
         _itemCount = 0;
     }
 
-    private void OnEnable()
+    public void AddToLayoutGroup(GameObject item)
     {
-        _button.onClick.AddListener(AddItemToInventory);
-    }
-
-    private void OnDisable()
-    {
-        _button.onClick.RemoveListener(AddItemToInventory);
-    }
-
-    public void AddItemToInventory()
-    {
-        GameObject item = Instantiate(_itemPrefab);
-
         if (_currentGroup == null || _itemCount % _itemsPerGroup == 0)
         {
             _currentGroup = CreateItemGroup();
@@ -55,5 +42,23 @@ public class InventoryManager : MonoBehaviour
         LayoutRebuilder.ForceRebuildLayoutImmediate(horizontalLayoutGroup.GetComponent<RectTransform>());
 
         return itemGroup;
+    }
+
+    public void RemoveFromLayoutGroup(Item item)
+    {
+        // foreach (Transform groupTransform in _content.transform)
+        // {
+        //     for (int i = 0; i < groupTransform.childCount; i++)
+        //     {
+        //         Transform itemTransform = groupTransform.GetChild(i);
+        //         
+        //         if (itemTransform.gameObject == item.gameObject)
+        //         {
+        //             Destroy(itemTransform.gameObject);
+        //             _itemCount--;
+        //             return;
+        //         }
+        //     }
+        // }
     }
 }
