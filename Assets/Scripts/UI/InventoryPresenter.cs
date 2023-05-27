@@ -1,37 +1,28 @@
-﻿namespace UI
+﻿using System;
+using UnityEngine;
+
+namespace UI
 {
-    public class InventoryPresenter
+    public class InventoryPresenter : MonoBehaviour
     {
-        private InventoryView _view;
-        private Inventory _inventory;
+        public event Action<DynamicItem> ItemAdded;
+        
+        private Inventory _inventory = new Inventory();
 
-        public InventoryPresenter(InventoryView view)
+        public void AddItemToInventory(DynamicItem dynamicItem)
         {
-            _view = view;
-            _inventory = new Inventory();
+            Item item = ItemDatabase.GetItem(dynamicItem.Index);
             
-            _inventory.OnItemAdded += OnItemAdded;
-            _inventory.OnItemRemoved += OnItemRemoved;
-        }
-
-        public void AddItemToInventory(Item item)
-        {
             _inventory.AddItem(item);
+            
+            ItemAdded?.Invoke(dynamicItem);
         }
 
-        public void RemoveItemFromInventory(Item item)
+        public void RemoveItemFromInventory(int itemId)
         {
+            Item item = ItemDatabase.GetItem(itemId);
+            
             _inventory.RemoveItem(item);
-        }
-
-        private void OnItemAdded(Item item)
-        {
-            // _view.AddToLayoutGroup(item);
-        }
-
-        private void OnItemRemoved(Item item)
-        {
-            // _view.RemoveFromLayoutGroup(item);
         }
     }
 }

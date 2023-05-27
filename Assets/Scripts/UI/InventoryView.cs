@@ -1,4 +1,5 @@
-﻿using UI;
+﻿using System;
+using UI;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +8,8 @@ public class InventoryView : MonoBehaviour
     [SerializeField] private GameObject _itemGroupPrefab;
 
     private readonly int _itemsPerGroup = 7;
-    
+
+    private InventoryPresenter _inventoryPresenter;
     private GameObject _scrollView;
     private GameObject _content;
     private GameObject _currentGroup;
@@ -20,8 +22,20 @@ public class InventoryView : MonoBehaviour
         _itemCount = 0;
     }
 
-    public void AddToLayoutGroup(GameObject item)
+    private void OnEnable()
     {
+        _inventoryPresenter.ItemAdded += AddToLayoutGroup;
+    }
+
+    private void OnDisable()
+    {
+        _inventoryPresenter.ItemAdded -= AddToLayoutGroup;
+    }
+
+    public void AddToLayoutGroup(DynamicItem dynamicItem)
+    {
+        GameObject item = dynamicItem.Image;
+
         if (_currentGroup == null || _itemCount % _itemsPerGroup == 0)
         {
             _currentGroup = CreateItemGroup();
@@ -61,4 +75,7 @@ public class InventoryView : MonoBehaviour
         //     }
         // }
     }
+
+    public void SetInventoryPresenter(InventoryPresenter inventoryPresenter) =>
+        _inventoryPresenter = inventoryPresenter;
 }

@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using Gameplay.Weapon;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Services
 {
     public class WeaponSelectorHandler : MonoBehaviour
     {
         [SerializeField] private List<Weapon> _weapons = new List<Weapon>();
-        [SerializeField] private Button _leftButton;
-        [SerializeField] private Button _rightButton;
 
         public event Action<Weapon> ChoosedWeapon;
 
@@ -24,19 +21,7 @@ namespace Services
             ChoosedWeapon?.Invoke(_weapon);
         }
 
-        private void OnEnable()
-        {
-            _leftButton.onClick.AddListener(OnLeftButtonClicked);
-            _rightButton.onClick.AddListener(OnRightButtonClicked);
-        }
-
-        private void OnDisable()
-        {
-            _leftButton.onClick.RemoveListener(OnLeftButtonClicked);
-            _rightButton.onClick.RemoveListener(OnRightButtonClicked);
-        }
-        
-        private void OnLeftButtonClicked()
+        public void SelectPreviousWeapon()
         {
             _currentWeapon--;
 
@@ -50,7 +35,7 @@ namespace Services
             ChoosedWeapon?.Invoke(_weapon);
         }
         
-        private void OnRightButtonClicked()
+        public void SelectNextWeapon()
         {
             _currentWeapon++;
 
