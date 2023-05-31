@@ -4,6 +4,7 @@
     {
         Zombie = 1,
         Mutant = 2,
-        SovietBag = 3
+        SovietBag = 3,
+        Player = 4,
     }
 }

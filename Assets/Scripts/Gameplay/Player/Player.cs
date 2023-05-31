@@ -4,21 +4,21 @@ using UnityEngine;
 
 namespace Gameplay.Player
 {
-    public class Player : MonoBehaviour, IDamageable
+    public class Player : MonoBehaviour, IDamageable, ICharacter
     {
         [SerializeField] private int _healthValue;
 
         public event Action<GameObject> ItemFaced;
         
-        private IHealth _health;
+        public IHealth Health { get; private set; }
         
         public Transform Transform { get; private set; }
         
         private void Awake()
         {
             Transform = gameObject.transform;
-            _health = new Health.Health(_healthValue);
-            print("Хп игрока" + _health.CurrentValue);
+            Health = new Health.Health(_healthValue);
+            print("Хп игрока" + Health.CurrentValue);
         }
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -29,7 +29,7 @@ namespace Gameplay.Player
 
         public void TakeDamage(int damage)
         {
-            _health.Decrease(damage);
+            Health.Decrease(damage);
         }
     }
 }

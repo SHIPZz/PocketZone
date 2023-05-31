@@ -6,23 +6,41 @@ namespace Gameplay.Player
 {
     public class PlayerInput : MonoBehaviour
     {
-        [SerializeField] private Button _shootButton;
-        
         public event Action MouseClicked;
+        
+        private Button _shootButton;
 
         private void OnEnable()
         {
-            _shootButton.onClick.AddListener(OnShootButtonClicked);
+            StartCoroutine(WaitForButtonAssignment());
         }
         
         private void OnDisable()
         {
-            _shootButton.onClick.RemoveListener(OnShootButtonClicked);
+            if (_shootButton != null)
+            {
+                _shootButton.onClick.RemoveListener(OnShootButtonClicked);
+            }
+        }
+
+        private System.Collections.IEnumerator WaitForButtonAssignment()
+        {
+            while (_shootButton == null)
+            {
+                yield return null;
+            }
+
+            _shootButton.onClick.AddListener(OnShootButtonClicked);
         }
         
         private void OnShootButtonClicked()
         {
             MouseClicked?.Invoke();
+        }
+
+        public void SetShootButton(Button shootButton)
+        {
+            _shootButton = shootButton;
         }
     }
 }

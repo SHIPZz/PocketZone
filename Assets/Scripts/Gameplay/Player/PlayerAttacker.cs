@@ -9,6 +9,8 @@ namespace Gameplay.Player
     {
         [SerializeField] private LayerMask _layerMask;
 
+        public event Action<Vector3> Detected;
+        
         private readonly int _maxAngle = 90;
 
         private Weapon.Weapon _weapon;
@@ -22,17 +24,18 @@ namespace Gameplay.Player
             var cirlceCollider2D = GetComponent<CircleCollider2D>();
             _radius = cirlceCollider2D.radius;
             cirlceCollider2D.enabled = false;
+            _weapon = _weaponSelectorHandler?.Weapon;
         }
 
         private void OnEnable()
         {
             _weaponSelectorHandler.ChoosedWeapon += SetWeapon;
-            _playerInput.MouseClicked += OnMouseClicked;
+            // _playerInput.MouseClicked += Attack;
         }
 
         private void OnDisable()
         {
-            _playerInput.MouseClicked -= OnMouseClicked;
+            // _playerInput.MouseClicked -= Attack;
             _weaponSelectorHandler.ChoosedWeapon -= SetWeapon;
         }
 
@@ -47,8 +50,7 @@ namespace Gameplay.Player
             {
                 var direction = hitCollider.transform.position - _weapon.transform.position;
                 _weapon.transform.right = direction;
-                
-                
+
                 _direction = hitCollider.transform.position;
 
                 if (Mathf.Abs(Vector2.Angle(Vector2.right, _weapon.transform.right)) > _maxAngle)
@@ -71,18 +73,19 @@ namespace Gameplay.Player
         public void SetPlayerInput(PlayerInput playerInput) =>
             _playerInput = playerInput;
 
-        public void SetWeapon(Weapon.Weapon weapon) =>
-            _weapon = weapon;
-
         public void SetWeaponSelectorHandler(WeaponSelectorHandler weaponSelectorHandler) =>
             _weaponSelectorHandler = weaponSelectorHandler;
 
-        private void OnMouseClicked()
+        private void SetWeapon(Weapon.Weapon weapon) =>
+            _weapon = weapon;
+        
+        private void Attack()
         {
             if (_direction == Vector3.zero || _direction == Vector3.one)
                 return;
 
-            _weapon.Shoot(_direction);
+            Detected?.Invoke(_direction);
+            // _weapon.Shoot(_direction);
         }
     }
 }

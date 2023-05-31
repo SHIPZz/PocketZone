@@ -9,7 +9,7 @@ namespace Services
     public class ItemSpawnerHandler : MonoBehaviour
     {
         [SerializeField] private SpawnObjectTypeId _spawnObjectTypeId;
-
+        
         private EnemyDestruction _enemyDestruction;
         private GameFactory.GameFactory _gameFactory;
 

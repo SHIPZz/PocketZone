@@ -1,4 +1,7 @@
 using System.Collections.Generic;
+using GameInit;
+using Services.Window;
+using UI;
 
 namespace Services.DependencyContainer
 {
@@ -11,6 +14,9 @@ namespace Services.DependencyContainer
             ServiceLocator.Register(new ObjectPoolsAccess.ObjectPoolsAccess());
             ServiceLocator.Register(new BulletFactory.BulletFactory());
             ServiceLocator.Register(new GameFactory.GameFactory());
+            ServiceLocator.Register(new InventoryPresenter());
+            ServiceLocator.Register(new WindowService());
+            ServiceLocator.Register(new UICreator());
             InputService inputService = new InputService();
             ServiceLocator.Register(inputService);
             _objects.Add(inputService);

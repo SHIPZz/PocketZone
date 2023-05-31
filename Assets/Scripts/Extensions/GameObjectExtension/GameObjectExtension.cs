@@ -26,8 +26,10 @@ namespace Extensions.GameObjectExtension
         public static void SetActive(this GameObject gameObject, bool isActive) =>
             gameObject.SetActive(isActive);
 
-        public static void SetActive(this MonoBehaviour monoBehaviour, GameObject gameObject, bool isActive, float delay) =>
+        public static void SetActive(this MonoBehaviour monoBehaviour, GameObject gameObject, bool isActive, float delay)
+        {
             monoBehaviour.StartCoroutine(DisableCoroutine(gameObject, delay, isActive));
+        }
 
         public static void SetActive(this MonoBehaviour monoBehaviour, IEnumerable<GameObject> gameObjects, bool isActive)
         {
@@ -35,19 +37,11 @@ namespace Extensions.GameObjectExtension
                 gameObject.SetActive(isActive);
         }
 
-        public static void SetActive(this MonoBehaviour monoBehaviour, GameObject[] gameObjects, bool isActive, float delay)
+        public static void SetActive(this MonoBehaviour monoBehaviour, IEnumerable<GameObject> gameObjects, bool isActive, float delay)
         {
-            for (int i = 0; i < gameObjects.Length; i++)
+            foreach (var gameObject in gameObjects)
             {
-                monoBehaviour.StartCoroutine(DisableCoroutine(gameObjects[i], delay, isActive));
-            }
-        }
-
-        public static void SetActive(this MonoBehaviour monoBehaviour, List<GameObject> gameObjects, bool isActive, float delay)
-        {
-            for (int i = 0; i < gameObjects.Count; i++)
-            {
-                monoBehaviour.StartCoroutine(DisableCoroutine(gameObjects[i], delay, isActive));
+                monoBehaviour.StartCoroutine(DisableCoroutine(gameObject, delay, isActive));
             }
         }
 

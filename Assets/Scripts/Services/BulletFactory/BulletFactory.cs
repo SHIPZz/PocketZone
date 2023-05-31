@@ -23,7 +23,6 @@ namespace Services.BulletFactory
             akBullet.GetComponent<Bullet>().Init(Constant.Constant.AKBulletDamage);
             akBullet.GetComponent<BulletMovement>().Init(direction, Constant.Constant.AKBulletsSpeed);
             
-
             return akBullet;
         }
 
