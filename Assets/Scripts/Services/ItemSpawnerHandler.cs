@@ -3,12 +3,13 @@ using Constant;
 using Gameplay.Enemy;
 using Services.DependencyContainer;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Services
 {
     public class ItemSpawnerHandler : MonoBehaviour
     {
-        [SerializeField] private SpawnObjectTypeId _spawnObjectTypeId;
+        [FormerlySerializedAs("_spawnObjectTypeId")] [SerializeField] private ObjectTypeId objectTypeId;
         
         private EnemyDestruction _enemyDestruction;
         private GameFactory.GameFactory _gameFactory;
@@ -33,9 +34,9 @@ namespace Services
 
         private void Spawn(Vector3 obj)
         {
-            switch (_spawnObjectTypeId)
+            switch (objectTypeId)
             {
-                case SpawnObjectTypeId.SovietBag:
+                case ObjectTypeId.SovietBag:
                     _item = _gameFactory.CreateObject(AssetPath.SovietBagPrefab);
                     break;
             }

@@ -1,5 +1,7 @@
 using System;
+using Services;
 using Services.BulletFactory;
+using Services.Databases;
 using Services.DependencyContainer;
 using UnityEngine;
 
@@ -11,6 +13,8 @@ namespace Gameplay.Weapon
 
         private void Awake()
         {
+            WeaponDatabase.Add(this);
+            ObjectTypeId = ObjectTypeId.AK;
             _bulletFactory = ServiceLocator.Get<BulletFactory>();
             BulletQuantity = Constant.Constant.AKBulletsCount;
         }

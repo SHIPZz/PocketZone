@@ -6,9 +6,14 @@ namespace UI
     public class InventoryPresenter
     {
         public event Action<DynamicItem> ItemAdded;
-        public event Action<DynamicItem> ItemRemoved; 
+        public event Action<DynamicItem> ItemRemoved;
 
-        private readonly Inventory _inventory = new Inventory();
+        private readonly Inventory _inventory;
+        
+        public InventoryPresenter(Inventory inventory)
+        {
+            _inventory = inventory;
+        }
 
         public void AddItemToInventory(DynamicItem dynamicItem)
         {

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using Services;
 using UnityEngine;
 
@@ -15,7 +17,7 @@ namespace Gameplay.Player
 
         private Weapon.Weapon _weapon;
         private float _radius;
-        private PlayerInput _playerInput;
+        // private PlayerInput _playerInput;
         private Vector3 _direction;
         private WeaponSelectorHandler _weaponSelectorHandler;
 
@@ -39,6 +41,17 @@ namespace Gameplay.Player
             _weaponSelectorHandler.ChoosedWeapon -= SetWeapon;
         }
 
+        // private IEnumerator EnableWithDelay()
+        // {
+        //     while (_weaponSelectorHandler == null || _playerInput == null)
+        //     {
+        //         yield return null;
+        //     }
+        //
+        //     _weaponSelectorHandler.ChoosedWeapon += SetWeapon;
+        //     // _playerInput.MouseClicked += Attack;
+        // }
+        
         private void Update()
         {
             if(_weapon == null)
@@ -69,9 +82,6 @@ namespace Gameplay.Player
             _weapon.transform.right = Vector3.right;
             _direction = Vector3.zero;
         }
-
-        public void SetPlayerInput(PlayerInput playerInput) =>
-            _playerInput = playerInput;
 
         public void SetWeaponSelectorHandler(WeaponSelectorHandler weaponSelectorHandler) =>
             _weaponSelectorHandler = weaponSelectorHandler;

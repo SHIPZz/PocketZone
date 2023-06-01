@@ -3,7 +3,10 @@ using Constant;
 using GameInit;
 using Gameplay;
 using Gameplay.Player;
+using Services.Databases;
 using Services.DependencyContainer;
+using Services.Window;
+using UI.Health;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -11,54 +14,40 @@ namespace Services
 {
     public class CharacterSpawner : MonoBehaviour
     {
-         [field: SerializeField] public SpawnObjectTypeId SpawnObjectTypeId { get; private set; }
+         [field: SerializeField] public ObjectTypeId ObjectTypeId { get; private set; }
 
         private GameFactory.GameFactory _gameFactory;
         private UICreator _uiCreator;
-        private GameObject _parent;
-        private Player _player;
 
         private void Awake()
         {
-            CharacterSpawnerDatabase.Add(this);
-        }
-
-        private void Start()
-        {
             _gameFactory = ServiceLocator.Get<GameFactory.GameFactory>();
             _uiCreator = ServiceLocator.Get<UICreator>();
+        }
 
+        public GameObject Spawn()
+        {
             GameObject obj = CreateObject();
-            
             SetPosition(obj);
             CreateHealthbar(obj);
+            return obj;
         }
 
         private GameObject CreateObject()
         {
-            switch (SpawnObjectTypeId)
+            switch (ObjectTypeId)
             {
-                case SpawnObjectTypeId.Mutant:
+                case ObjectTypeId.Mutant:
                     return _gameFactory.CreateObject(AssetPath.Mutantrefab);
 
-                case SpawnObjectTypeId.Zombie:
+                case ObjectTypeId.Zombie:
                     return _gameFactory.CreateObject(AssetPath.ZombiePrefab);
 
-                case SpawnObjectTypeId.Player:
-                    var player = _gameFactory.CreateObject(AssetPath.PlayerPrefab);
-                    _player = player.GetComponent<Player>();
-                    return player;
+                case ObjectTypeId.Player:
+                    return _gameFactory.CreateObject(AssetPath.PlayerPrefab);
             }
 
             return null;
-        }
-
-        public Player GetPlayer() =>
-            _player;
-        
-        public void SetParentForHealthbar(GameObject parent)
-        {
-            _parent = parent;
         }
 
         private void SetPosition(GameObject obj)
@@ -68,10 +57,10 @@ namespace Services
 
         private void CreateHealthbar(GameObject obj)
         {
-            if (obj.TryGetComponent(out ICharacter character))
+            if (obj.TryGetComponent(out Character character))
             {
-                GameObject gameObject = _uiCreator.CreateHealthbar(character.Health, character);
-               gameObject.transform.SetParent(_parent.transform);
+                GameObject healthbarPrefab = _uiCreator.CreateHealthbar(character.Health);
+               healthbarPrefab.transform.SetParent(WindowDatabase.Get(WindowTypeId.Health).gameObject.transform);
             }
         }
     }

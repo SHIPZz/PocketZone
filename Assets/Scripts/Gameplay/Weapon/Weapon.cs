@@ -1,4 +1,6 @@
 using System;
+using Services;
+using Services.Databases;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -8,6 +10,8 @@ namespace Gameplay.Weapon
     {
         [SerializeField] protected Transform ShootPoint;
         [SerializeField] protected float FireRate;
+        
+        [field: SerializeField] public ObjectTypeId ObjectTypeId { get; protected set; }
 
         public int BulletQuantity { get; set; }
         

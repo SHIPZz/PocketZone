@@ -19,14 +19,14 @@ namespace Gameplay.Player
 
         private void OnEnable()
         {
-            _inputService.HorizontalMoved += OnHorizontalMoved;
-            _inputService.VerticalMoved += OnVerticalMoved;
+            // _inputService.HorizontalMoved += OnHorizontalMoved;
+            // _inputService.VerticalMoved += OnVerticalMoved;
         }
 
         private void OnDisable()
         {
-            _inputService.HorizontalMoved += OnHorizontalMoved;
-            _inputService.VerticalMoved += OnVerticalMoved;
+            // _inputService.HorizontalMoved += OnHorizontalMoved;
+            // _inputService.VerticalMoved += OnVerticalMoved;
         }
 
         private void OnVerticalMoved(float obj)

@@ -10,13 +10,13 @@ namespace UI
         [SerializeField] private Button _removeButton;
         
         private DynamicItemRemoverInput _dynamicItemRemoverInput;
-        private InventoryPresenter _inventoryPresenter;
         private DynamicItem _dynamicItem;
+        
+        public InventoryPresenter InventoryPresenter { get; set; }
 
         private void Awake()
         {
             _dynamicItemRemoverInput = GetComponent<DynamicItemRemoverInput>();
-            _inventoryPresenter = ServiceLocator.Get<InventoryPresenter>();
             _removeButton.gameObject.SetActive(false);
         }
 
@@ -34,7 +34,7 @@ namespace UI
         
         private void OnRemoveButtonClicked()
         {
-            _inventoryPresenter.RemoveItemFromInventory(_dynamicItem);
+            InventoryPresenter.RemoveItemFromInventory(_dynamicItem);
         }
 
         private void OnItemClicked(DynamicItem dynamicItem)

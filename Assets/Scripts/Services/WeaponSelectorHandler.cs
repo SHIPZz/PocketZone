@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Extensions.GameObjectExtension;
 using Gameplay.Weapon;
+using Services.Databases;
 using UnityEngine;
 
 namespace Services
@@ -13,19 +14,18 @@ namespace Services
         public event Action<Weapon> ChoosedWeapon;
         public event Action<Weapon> OldWeaponSwitched; 
 
-        private Weapon _weapon;
         private int _currentWeapon = 0;
 
         public IReadOnlyList<Weapon> Weapons =>
             _weapons;
+        
+        public Weapon Weapon { get; private set; }
 
-        public Weapon Weapon =>
-            _weapon;
-
-        private void Start()
+        private void Awake()
         {
-            _weapon = _weapons[Constant.Constant.AkId];
-            _weapon.gameObject.SetActive(true);
+            _weapons = WeaponDatabase.Values;
+            Weapon = _weapons[Constant.Constant.AkId];
+            Weapon.gameObject.SetActive(true);
         }
 
         public void SelectPreviousWeapon()
@@ -35,7 +35,7 @@ namespace Services
             if (_currentWeapon < 0)
                 _currentWeapon = _weapons.Count - 1;
             
-            _weapon.gameObject.SetActive(false);
+            Weapon.gameObject.SetActive(false);
             
             SetActiveWeapon();
         }
@@ -47,19 +47,19 @@ namespace Services
             if (_currentWeapon >= _weapons.Count)
                 _currentWeapon = 0;
 
-            _weapon.gameObject.SetActive(false);
+            Weapon.gameObject.SetActive(false);
             
             SetActiveWeapon();
         }
 
         private void SetActiveWeapon()
         {
-            OldWeaponSwitched?.Invoke(_weapon);
+            OldWeaponSwitched?.Invoke(Weapon);
             
-            _weapon = _weapons[_currentWeapon];
-            _weapon.gameObject.SetActive(true);
+            Weapon = _weapons[_currentWeapon];
+            Weapon.gameObject.SetActive(true);
             
-            ChoosedWeapon?.Invoke(_weapon);
+            ChoosedWeapon?.Invoke(Weapon);
         }
 
         public void FillList( List<Weapon> weapons)

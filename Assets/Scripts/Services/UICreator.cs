@@ -4,6 +4,7 @@ using Gameplay.Health;
 using Services.DependencyContainer;
 using Services.GameFactory;
 using Services.Window;
+using UI;
 using UI.Health;
 using UnityEngine;
 
@@ -11,7 +12,7 @@ namespace GameInit
 {
     public class UICreator
     {
-        public Canvas MainUI { get; private set; }
+        public MainUI MainUI { get; private set; }
         
         private readonly GameFactory _gameFactory;
         private readonly WindowService _windowService;
@@ -24,21 +25,18 @@ namespace GameInit
             // CreateInventory();
         }
 
-        public GameObject CreateHealthbar(IHealth health, ICharacter character)
+        public GameObject CreateHealthbar(IHealth health)
         {
             var healthbar = _gameFactory.CreateObject(AssetPath.HealthbarPrefab);
-            var healthbarPresenter = healthbar.GetComponent<HealthPresenter>();
             var healthView = healthbar.GetComponentInChildren<HealthView>();
-            healthbarPresenter.SetCharacter(character);
-            healthbarPresenter.SetHealth(health);
-            healthbarPresenter.SetHealthView(healthView);
+            HealthPresenter healthbarPresenter = new HealthPresenter(healthView, health);
 
             return healthbar;
         }
 
-        private Canvas CreateMainUI()
+        private MainUI CreateMainUI()
         {
-            return _gameFactory.CreateObject(AssetPath.UIPrefab).GetComponent<Canvas>();
+            return _gameFactory.CreateObject(AssetPath.UIPrefab).GetComponent<MainUI>();
         }
         
         private GameObject CreateInventoryWindow()

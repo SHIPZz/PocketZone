@@ -703,6 +703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d69b04aff9faf1940b9812936f1e7f3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ObjectTypeId>k__BackingField: 1
   _healthValue: 150
 --- !u!70 &3542502368783973709
 CapsuleCollider2D:
@@ -1364,4 +1365,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7417f2f424024271b29b55596e70744d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnObjectTypeId: 3
+  objectTypeId: 3

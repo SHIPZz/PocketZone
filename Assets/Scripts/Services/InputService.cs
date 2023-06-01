@@ -1,20 +1,20 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Services
 {
-    public class InputService : IUpdateable
+    public class InputService
     {
-        public event Action<float> HorizontalMoved;
-        public event Action<float> VerticalMoved;
-
         private string _horizontal = "Horizontal";
         private string _vertical = "Vertical";
+        private string _fire = "Fire";
 
-        public void Update()
-        {
-            HorizontalMoved?.Invoke(SimpleInput.GetAxis(_horizontal));
-            VerticalMoved?.Invoke(SimpleInput.GetAxis(_vertical));
-        }
+
+        public Vector2 GetAxis() => 
+            new(SimpleInput.GetAxis(_horizontal), SimpleInput.GetAxis(_vertical));
+
+        public bool IsAttackInvoked() =>
+            SimpleInput.GetButtonUp(_fire);
     }
 }

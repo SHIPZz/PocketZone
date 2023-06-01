@@ -299,6 +299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShootPoint: {fileID: 4827771946515248141}
   FireRate: 0.5
+  <ObjectTypeId>k__BackingField: 0
 --- !u!1 &4827771946180747903
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,6 +679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb3ed432e506e914aa9f8334d939db57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ObjectTypeId>k__BackingField: 4
   _healthValue: 100
 --- !u!114 &4827771946769357458
 MonoBehaviour:
@@ -834,6 +836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShootPoint: {fileID: 4827771945622804605}
   FireRate: 0.1
+  <ObjectTypeId>k__BackingField: 0
 --- !u!1 &4827771947035485634
 GameObject:
   m_ObjectHideFlags: 0

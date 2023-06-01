@@ -6,8 +6,6 @@ namespace UI.Health
 {
     public class HealthView : MonoBehaviour
     {
-        public event Action<int> ValueChanged; 
-
         private Slider _slider;
 
         private void Awake()

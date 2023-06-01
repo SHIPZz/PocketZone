@@ -14,6 +14,11 @@ namespace UI
 
         private Weapon _currentWeapon;
 
+        private void Awake()
+        {
+            _bulletQuantityText = GetComponentInChildren<BulletQuantityText>();
+        }
+
         private void Start()
         {
             _bulletQuantities = new Dictionary<Weapon, int>();
@@ -50,7 +55,6 @@ namespace UI
         
         private void OnChoosedWeapon(Weapon weapon)
         {
-            print(weapon);
             _currentWeapon = weapon;
             _bulletQuantityText.Weapon = _currentWeapon;
         }
@@ -69,11 +73,6 @@ namespace UI
         public void SetWeaponSelectorHandler(WeaponSelectorHandler weaponSelectorHandler)
         {
             _weaponSelectorHandler = weaponSelectorHandler;
-        }
-
-        public void SetBulletQuantityText(BulletQuantityText bulletQuantityText)
-        {
-            _bulletQuantityText = bulletQuantityText;
         }
     }
 }

@@ -5,37 +5,26 @@ using UnityEngine;
 
 namespace UI.Health
 {
-    public class HealthPresenter : MonoBehaviour
+    public class HealthPresenter
     { 
         private HealthView _healthView;
         
-        private ICharacter _character;
         private IHealth _health;
 
-        private void Start()
+        public HealthPresenter(HealthView healthView, IHealth health)
         {
+            _healthView = healthView;
+            _health = health;
+            
             _healthView.SetMaxValue(_health.CurrentValue);
-        }
-        
-        private void OnEnable()
-        {
             _health.ValueChanged += OnValueChanged;
         }
-        
-        private void OnDisable()
+
+        ~HealthPresenter()
         {
             _health.ValueChanged -= OnValueChanged;
         }
 
-        public void SetHealthView(HealthView healthView) =>
-            _healthView = healthView;
-        
-        public void SetCharacter(ICharacter character) =>
-            _character = character;
-        
-        public void SetHealth(IHealth health) =>
-            _health = health;
-        
         private void OnValueChanged(int value)
         {
             _healthView.SetValue(value);

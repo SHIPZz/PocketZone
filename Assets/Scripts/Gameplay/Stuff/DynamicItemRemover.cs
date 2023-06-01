@@ -5,11 +5,11 @@ using UnityEngine;
 public class DynamicItemRemover : MonoBehaviour
 {
     private DynamicItemRemoverInput _dynamicItemRemoverInput;
-    private InventoryPresenter _inventoryPresenter;
+    
+    public InventoryPresenter InventoryPresenter { get; set; }
     
     private void Awake()
     {
-        _inventoryPresenter = ServiceLocator.Get<InventoryPresenter>();
         _dynamicItemRemoverInput = GetComponent<DynamicItemRemoverInput>();
     }
 

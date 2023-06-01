@@ -12,7 +12,7 @@
         public const string InputCanvasPrefab  = "Prefabs/InputCanvas";
         public const string PlayerPrefab = "Prefabs/Player";
         public const string UIPrefab = "Prefabs/UI";
-        public const string ObjectSpawnersPrefab = "Prefabs/ObjectSpawners";
+        public const string CharacterSpawnerPrefab = "Prefabs/CharacterSpawner";
         public const string WeaponSelectorPrefab = "Prefabs/WeaponSelector";
     }
 }
