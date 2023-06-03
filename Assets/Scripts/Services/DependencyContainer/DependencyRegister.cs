@@ -1,14 +1,10 @@
-using System.Collections.Generic;
 using GameInit;
 using Services.Window;
-using UI;
 
 namespace Services.DependencyContainer
 {
     public class DependencyRegister
     {
-        private List<object> _objects = new List<object>();
-
         public DependencyRegister()
         {
             ServiceLocator.Register(new ObjectPoolsAccess.ObjectPoolsAccess());
@@ -18,16 +14,6 @@ namespace Services.DependencyContainer
             ServiceLocator.Register(new UICreator());
             InputService inputService = new InputService();
             ServiceLocator.Register(inputService);
-            _objects.Add(inputService);
-        }
-
-        public void Update()
-        {
-            foreach (var @object in _objects)
-            {
-                if(@object is IUpdateable updateable)
-                    updateable.Update();
-            }
         }
     }
 }

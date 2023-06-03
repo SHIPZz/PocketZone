@@ -1,30 +1,22 @@
-using Services.DependencyContainer;
 using UI;
 using UnityEngine;
 
-public class DynamicItemRemover : MonoBehaviour
+namespace Gameplay.Stuff
 {
-    private DynamicItemRemoverInput _dynamicItemRemoverInput;
-    
-    public InventoryPresenter InventoryPresenter { get; set; }
-    
-    private void Awake()
+    public class DynamicItemRemover
     {
-        _dynamicItemRemoverInput = GetComponent<DynamicItemRemoverInput>();
-    }
+        private InventoryPresenter _inventoryPresenter;
 
-    private void OnEnable()
-    {
-        _dynamicItemRemoverInput.Clicked += OnButtonClicked;
-    }
-
-    private void OnDisable()
-    {
-        _dynamicItemRemoverInput.Clicked -= OnButtonClicked;
-    }
-
-    private void OnButtonClicked(DynamicItem dynamicItem)
-    {
-       
+        public DynamicItemRemover(InventoryPresenter inventoryPresenter)
+        {
+            _inventoryPresenter = inventoryPresenter;
+        }
+        
+        public void Remove(DynamicItem dynamicItem)
+        {
+            Debug.Log(dynamicItem);
+            Debug.Log(_inventoryPresenter);
+            _inventoryPresenter.RemoveItemFromInventory(dynamicItem);
+        }
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 namespace Gameplay.Health
 {
@@ -6,7 +7,7 @@ namespace Gameplay.Health
     {
         event Action<int> ValueChanged;
         event Action ValueZeroReached;
-    
+        
         int CurrentValue { get; }
         void Increase(int value);
         void Decrease(int value);

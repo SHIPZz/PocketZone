@@ -1,8 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using Services.Window;
 using UI;
-using UnityEngine;
 
 public class WindowDatabase
 {

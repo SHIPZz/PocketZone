@@ -1,5 +1,5 @@
 ﻿using System;
-using Services.DependencyContainer;
+using Gameplay.Stuff;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,32 +9,39 @@ namespace UI
     {
         [SerializeField] private Button _removeButton;
         
-        private DynamicItemRemoverInput _dynamicItemRemoverInput;
+        private DynamicItemInput _dynamicItemInput;
+
+        private DynamicItemRemover _dynamicItemRemover;
         private DynamicItem _dynamicItem;
         
         public InventoryPresenter InventoryPresenter { get; set; }
 
         private void Awake()
         {
-            _dynamicItemRemoverInput = GetComponent<DynamicItemRemoverInput>();
+            _dynamicItemInput = GetComponent<DynamicItemInput>();
+        }
+        
+        private void Start()
+        {
+            _dynamicItemRemover = new(InventoryPresenter);
             _removeButton.gameObject.SetActive(false);
         }
 
         private void OnEnable()
         {
-            _dynamicItemRemoverInput.Clicked += OnItemClicked;
+            _dynamicItemInput.Clicked += OnItemClicked;
             _removeButton.onClick.AddListener(OnRemoveButtonClicked);
         }
         
         private void OnDisable()
         {
             _removeButton.onClick.RemoveListener(OnRemoveButtonClicked);
-            _dynamicItemRemoverInput.Clicked -= OnItemClicked;
+            _dynamicItemInput.Clicked -= OnItemClicked;
         }
         
         private void OnRemoveButtonClicked()
         {
-            InventoryPresenter.RemoveItemFromInventory(_dynamicItem);
+            _dynamicItemRemover.Remove(_dynamicItem);
         }
 
         private void OnItemClicked(DynamicItem dynamicItem)

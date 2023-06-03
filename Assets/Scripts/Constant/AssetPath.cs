@@ -14,5 +14,6 @@
         public const string UIPrefab = "Prefabs/UI";
         public const string CharacterSpawnerPrefab = "Prefabs/CharacterSpawner";
         public const string WeaponSelectorPrefab = "Prefabs/WeaponSelector";
+        public const string InputHandler = "Prefabs/InputHandler";
     }
 }

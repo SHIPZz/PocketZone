@@ -17,22 +17,13 @@ public class InventoryView : MonoBehaviour
     private GameObject _currentGroup;
     private int _itemCount;
 
-    private void Awake()
-    {
-        _inventoryPresenter = ServiceLocator.Get<InventoryPresenter>();
-    }
-
     private void Start()
     {
         _scrollView = transform.parent.gameObject;
         _content = _scrollView.transform.GetChild(0).gameObject;
-        _itemCount = 0;
-    }
-
-    private void OnEnable()
-    {
         _inventoryPresenter.ItemAdded += AddToLayoutGroup;
         _inventoryPresenter.ItemRemoved += RemoveFromLayoutGroup;
+        _itemCount = 0;
     }
 
     private void OnDisable()

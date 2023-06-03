@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Services.Window
@@ -7,6 +6,7 @@ namespace Services.Window
     public class WindowService
     {
         private readonly List<UI.Window> _windows = new List<UI.Window>();
+        private readonly List<UI.Window> _hudWindows = new List<UI.Window>();
         
         public UI.Window GetWindow(WindowTypeId windowTypeId)
         {
@@ -28,14 +28,7 @@ namespace Services.Window
                 window.Close();
             }
         }
-        
-        public void OpenHudWindows()
-        {
-            CloseAll();
-            
-            OpenWindow(WindowTypeId.Input);
-        }
-        
+
         public void OpenWindow(WindowTypeId windowTypeId)
         {
             foreach (var window in _windows)
@@ -44,6 +37,16 @@ namespace Services.Window
                 {
                     window.Open();
                 }
+            }
+        }
+
+        public void OpenHudWindows()
+        {
+            CloseAll();
+            
+            foreach (var window in _hudWindows)
+            {
+                window.Open();
             }
         }
         
@@ -58,17 +61,24 @@ namespace Services.Window
             }
         }
 
-        public void FillList(UI.Window window) =>
-            _windows.Add(window);
-        
         public void FillList(IReadOnlyList<UI.Window> windows)
         {
             foreach (var window in windows)
             {
                 _windows.Add(window);
+                AddHudWindows(window);
             }
+            
+            Debug.Log(_windows.Count);
+            Debug.Log(_hudWindows.Count);
         }
 
+        private void AddHudWindows(UI.Window window)
+        {
+            if(window.WindowTypeId == WindowTypeId.Health || window.WindowTypeId == WindowTypeId.BulletQuantity || 
+               window.WindowTypeId == WindowTypeId.Input)
+                _hudWindows.Add(window);
+        }
     }
 }
       

@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using Constant;
+using Gameplay.Enemy;
 using Gameplay.Player;
 using Gameplay.Weapon;
 using Services;
@@ -11,16 +10,16 @@ using Services.GameFactory;
 using Services.Window;
 using UI;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace GameInit
 {
     public class GameInit : MonoBehaviour
     {
+        private readonly List<GameObject> _enemies = new ();
         private DependencyRegister _dependencyRegister;
         private GameFactory _gameFactory;
-        private readonly List<GameObject> _enemies = new ();
         private GameObject _player;
+        private InventoryPresenter _inventoryPresenter;
 
         private void Awake()
         {
@@ -28,22 +27,42 @@ namespace GameInit
             _gameFactory = ServiceLocator.Get<GameFactory>();
             var uiCreator = ServiceLocator.Get<UICreator>();
 
-            InitializeInventory();
+            InitializeInventory(uiCreator.MainUI);
             CharacterSpawner[] spawners = InitializeCharacterSpawners();
-            CreteCharacters(spawners);
+            CreateCharacters(spawners);
             WeaponSelectorHandler weaponSelector = InitializeWeaponSelector(); 
             InitializePlayer(_player, weaponSelector);
+            InitializeEnemy(_player.GetComponent<Player>());
             var windowService = ServiceLocator.Get<WindowService>();
+            InitializeDynamicItemRemoverMediators();
             InitializeWindowService(windowService);
             InitializeBulletUI(uiCreator.MainUI, weaponSelector);
             InitializeItemTaker();
+            InitializeInputHandler(weaponSelector);
         }
 
-        private void CreteCharacters(CharacterSpawner[] spawners)
+        private void InitializeDynamicItemRemoverMediators()
+        {
+            foreach (var dynamicItem in DynamicItemDatabase.Values)
+            {
+                var dynamicItemRemoverMediator = dynamicItem.GetComponent<DynamicItemRemoverMediator>();
+                dynamicItemRemoverMediator.InventoryPresenter = _inventoryPresenter;
+            }
+        }
+
+        private void InitializeInputHandler(WeaponSelectorHandler weaponSelectorHandler)
+        {
+            var inputHandler = _gameFactory.CreateObject(AssetPath.InputHandler).GetComponent<InputHandler>();
+
+            inputHandler.WeaponSelectorHandler = weaponSelectorHandler;
+        }
+
+        private void CreateCharacters(CharacterSpawner[] spawners)
         {
             foreach (CharacterSpawner spawner in spawners)
             {
                 GameObject obj = spawner.Spawn();
+                
                 if (spawner.ObjectTypeId == ObjectTypeId.Player)
                     _player = obj;
                 else
@@ -51,15 +70,18 @@ namespace GameInit
             }
         }
 
-        private void Update()
+        private void InitializeEnemy(Player player)
         {
-            _dependencyRegister.Update();
+            foreach (var enemy in _enemies)
+            {
+                enemy.GetComponent<EnemyStateMachine>().Player = player;
+            }
         }
-        
+
         private void InitializeItemTaker()
         {
-            // _itemTaker = _player.GetComponentInChildren<ItemTaker>();
-            // _itemTaker.InventoryPresenter = _inventoryPresenter;
+            var itemTaker = _player.GetComponentInChildren<ItemTaker>();
+            itemTaker.InventoryPresenter = _inventoryPresenter;
         }
 
         private CharacterSpawner[] InitializeCharacterSpawners() => 
@@ -74,10 +96,17 @@ namespace GameInit
             playerAttacker.SetWeaponSelectorHandler(weaponSelectorHandler);
             var weaponMediator = weaponSelectorHandler.GetComponent<WeaponMediator>();
             weaponMediator.SetPlayerAttacker(playerAttacker);
+            
+            playerAttacker.SetWeapon(weaponSelectorHandler.Weapon);
         }
 
-        private WeaponSelectorHandler InitializeWeaponSelector() =>
-            _gameFactory.CreateObject(AssetPath.WeaponSelectorPrefab).GetComponent<WeaponSelectorHandler>();
+        private WeaponSelectorHandler InitializeWeaponSelector()
+        {
+           var weaponSelectorHandler =  _gameFactory.CreateObject(AssetPath.WeaponSelectorPrefab).
+               GetComponent<WeaponSelectorHandler>();
+
+           return weaponSelectorHandler;
+        }
 
         private void InitializeWindowService(WindowService windowService)
         {
@@ -87,14 +116,13 @@ namespace GameInit
         private void InitializeBulletUI(MainUI mainUI, WeaponSelectorHandler weaponSelectorHandler)
         {
             mainUI.BulletQuantityMediator.SetWeaponSelectorHandler(weaponSelectorHandler);
-
         }
 
-        private void InitializeInventory()
+        private void InitializeInventory(MainUI mainUI)
         {
-            // _inventoryPresenter = new InventoryPresenter(_inventory);
-            // _inventoryPresenter = ServiceLocator.Get<InventoryPresenter>();
-            // _inventoryView.SetInventoryPresenter(_inventoryPresenter);
+            Inventory inventory = new Inventory();
+            _inventoryPresenter = new InventoryPresenter(inventory);
+            mainUI.InventoryView.SetInventoryPresenter(_inventoryPresenter);
         }
     }
 }

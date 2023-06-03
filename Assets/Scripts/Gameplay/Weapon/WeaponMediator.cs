@@ -23,14 +23,10 @@ namespace Gameplay.Weapon
         private void Start()
         {
             _count = _weapon.BulletQuantity;
-        }
-
-        private void OnEnable()
-        {
             _playerAttacker.Detected += OnDetected;
             _weaponSelectorHandler.ChoosedWeapon += SetWeapon;
         }
-        
+
         private void OnDisable()
         {
             _weaponSelectorHandler.ChoosedWeapon -= SetWeapon;
@@ -39,7 +35,7 @@ namespace Gameplay.Weapon
         
         private void OnDetected(Vector3 direction)
         {
-            _weapon.Shoot(direction);
+            // _weapon.Shoot(direction);
         }
 
         private void BulletQuantityChanged(int count)

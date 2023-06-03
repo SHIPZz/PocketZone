@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Gameplay.Weapon;
 using Services;
+using Services.Databases;
 using UnityEngine;
 
 namespace UI
@@ -12,8 +12,6 @@ namespace UI
         private Dictionary<Weapon, int> _bulletQuantities;
         private BulletQuantityText _bulletQuantityText;
 
-        private Weapon _currentWeapon;
-
         private void Awake()
         {
             _bulletQuantityText = GetComponentInChildren<BulletQuantityText>();
@@ -23,51 +21,42 @@ namespace UI
         {
             _bulletQuantities = new Dictionary<Weapon, int>();
 
-            foreach (var weapon in _weaponSelectorHandler.Weapons)
+            foreach (var weapon in WeaponDatabase.Values)
             {
+                weapon.BulletsChanged += OnBulletsChanged;
                 _bulletQuantities.Add(weapon, weapon.BulletQuantity);
             }
-
-            _currentWeapon = _weaponSelectorHandler.Weapon;
-            _bulletQuantityText.Weapon = _currentWeapon;
+            
             _weaponSelectorHandler.ChoosedWeapon += OnChoosedWeapon;
             _weaponSelectorHandler.OldWeaponSwitched += LastWeaponChoosed;
-            _currentWeapon.BulletsChanged += OnBulletsChanged;
         }
         
         private void OnDisable()
         {
-            _currentWeapon.BulletsChanged -= OnBulletsChanged;
+            foreach (var weapon in WeaponDatabase.Values)
+            {
+                weapon.BulletsChanged -= OnBulletsChanged;
+            }
+            
             _weaponSelectorHandler.OldWeaponSwitched -= LastWeaponChoosed;
             _weaponSelectorHandler.ChoosedWeapon -= OnChoosedWeapon;
         }
 
-        private void OnBulletsChanged(int obj, Weapon weapon)
+        private void OnBulletsChanged(int count, Weapon weapon)
         {
-            _currentWeapon = weapon;
-            
-            _bulletQuantities[_currentWeapon] = obj;
-            
-            Debug.Log(weapon);
-            
-            _bulletQuantityText.Weapon = _currentWeapon;
+            _bulletQuantities[weapon] = count;
+
+            _bulletQuantityText.Set(weapon.BulletQuantity);
         }
         
         private void OnChoosedWeapon(Weapon weapon)
         {
-            _currentWeapon = weapon;
-            _bulletQuantityText.Weapon = _currentWeapon;
+            _bulletQuantityText.Set(weapon.BulletQuantity);
         }
 
         private void LastWeaponChoosed(Weapon weapon)
         {
-            if (_currentWeapon != null)
-            {
-                _bulletQuantities[_currentWeapon] = _currentWeapon.BulletQuantity;
-            }
-    
-            _currentWeapon = weapon;
-            _bulletQuantityText.Weapon = _currentWeapon;
+            _bulletQuantities[weapon] = weapon.BulletQuantity;
         }
         
         public void SetWeaponSelectorHandler(WeaponSelectorHandler weaponSelectorHandler)

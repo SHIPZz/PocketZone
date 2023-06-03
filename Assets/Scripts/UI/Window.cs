@@ -1,10 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Extensions.GameObjectExtension;
 using Services.Window;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace UI
 {
@@ -19,12 +14,12 @@ namespace UI
 
     public void Close()
     {
-        this.enabled = false;
+        gameObject.SetActive(false);
     }
     
     public void Open()
     {
-        this.enabled = true;
+        gameObject.SetActive(true);
     }
 }
 }
