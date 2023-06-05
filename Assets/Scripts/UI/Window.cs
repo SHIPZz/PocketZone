@@ -1,3 +1,4 @@
+using DG.Tweening;
 using Services.Window;
 using UnityEngine;
 
@@ -14,12 +15,12 @@ namespace UI
 
     public void Close()
     {
-        gameObject.SetActive(false);
+        gameObject.transform.DOScale(0, 0);
     }
     
     public void Open()
     {
-        gameObject.SetActive(true);
+        gameObject.transform.DOScale(1, 0);
     }
 }
 }

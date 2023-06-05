@@ -33,7 +33,6 @@ namespace Services
         {
             if (_inputService.IsInventoryOpened())
             {
-                print("1");
                 _windowService.CloseAll();
                 _windowService.OpenWindow(WindowTypeId.Inventory);
             }
@@ -56,9 +55,9 @@ namespace Services
         private void InventoryOpening()
         {
             if (_inputService.IsInventoryOpened())
-                WindowDatabase.Get(WindowTypeId.Inventory).gameObject.transform.DOScale(1, 1);
+                WindowDatabase.Get(WindowTypeId.Inventory).gameObject.transform.DOScaleX(1, 1);
             else if (_inputService.IsInventoryClosed())
-                WindowDatabase.Get(WindowTypeId.Inventory).gameObject.transform.DOScale(0, 0.5f);
+                WindowDatabase.Get(WindowTypeId.Inventory).gameObject.transform.DOScaleX(0, 0.5f);
         }
 
         private void WeaponSwitching()

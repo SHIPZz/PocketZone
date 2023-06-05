@@ -21,8 +21,8 @@ public class InventoryView : MonoBehaviour
     {
         _scrollView = transform.parent.gameObject;
         _content = _scrollView.transform.GetChild(0).gameObject;
-        _inventoryPresenter.ItemAdded += AddToLayoutGroup;
         _inventoryPresenter.ItemRemoved += RemoveFromLayoutGroup;
+        _inventoryPresenter.ItemAdded += AddToLayoutGroup;
         _itemCount = 0;
     }
 
@@ -31,8 +31,11 @@ public class InventoryView : MonoBehaviour
         _inventoryPresenter.ItemRemoved -= RemoveFromLayoutGroup;
         _inventoryPresenter.ItemAdded -= AddToLayoutGroup;
     }
-
-    public void AddToLayoutGroup(DynamicItem dynamicItem)
+    
+    public void SetInventoryPresenter(InventoryPresenter inventoryPresenter) =>
+        _inventoryPresenter = inventoryPresenter;
+    
+    private void AddToLayoutGroup(DynamicItem dynamicItem)
     {
         GameObject item = dynamicItem.gameObject;
 
@@ -41,12 +44,13 @@ public class InventoryView : MonoBehaviour
             _currentGroup = CreateItemGroup();
         }
 
-        item.transform.SetParent(_currentGroup.transform, false);
-
         _itemCount++;
+
+        item.transform.SetParent(_currentGroup.transform, false);
 
         LayoutRebuilder.ForceRebuildLayoutImmediate(_content.GetComponent<RectTransform>());
     }
+
 
     private GameObject CreateItemGroup()
     {
@@ -58,26 +62,31 @@ public class InventoryView : MonoBehaviour
         return itemGroup;
     }
 
-    public void RemoveFromLayoutGroup(DynamicItem dynamicItem)
+    private void RemoveFromLayoutGroup(DynamicItem dynamicItem)
     {
         GameObject item = dynamicItem.gameObject;
-        
+
         foreach (Transform groupTransform in _content.transform)
         {
             for (int i = 0; i < groupTransform.childCount; i++)
             {
                 Transform itemTransform = groupTransform.GetChild(i);
-                
+
                 if (itemTransform.gameObject == item)
                 {
                     Destroy(itemTransform.gameObject);
                     _itemCount--;
+
+                    if (groupTransform.childCount == 0)
+                    {
+                        Destroy(groupTransform.gameObject);
+                        _currentGroup = null;
+                    }
+
                     return;
                 }
             }
         }
     }
 
-    public void SetInventoryPresenter(InventoryPresenter inventoryPresenter) =>
-        _inventoryPresenter = inventoryPresenter;
-}
+    }

@@ -14,8 +14,6 @@ namespace Gameplay.Stuff
         
         public void Remove(DynamicItem dynamicItem)
         {
-            Debug.Log(dynamicItem);
-            Debug.Log(_inventoryPresenter);
             _inventoryPresenter.RemoveItemFromInventory(dynamicItem);
         }
     }

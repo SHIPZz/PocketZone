@@ -26,10 +26,11 @@ namespace UI
 
         public void RemoveItemFromInventory(DynamicItem dynamicItem)
         {
+            Debug.Log(dynamicItem);
             Item item = ItemDatabase.GetItem(dynamicItem.Index);
             
             _inventory.RemoveItem(item);
-            
+
             ItemRemoved?.Invoke(dynamicItem);
         }
     }

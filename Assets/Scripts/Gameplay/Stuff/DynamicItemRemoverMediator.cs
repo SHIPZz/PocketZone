@@ -41,7 +41,12 @@ namespace UI
         
         private void OnRemoveButtonClicked()
         {
-            _dynamicItemRemover.Remove(_dynamicItem);
+            if (_dynamicItem != null)
+            {
+                InventoryPresenter.RemoveItemFromInventory(_dynamicItem);
+                _dynamicItem = null;
+                _removeButton.gameObject.SetActive(false);
+            }
         }
 
         private void OnItemClicked(DynamicItem dynamicItem)

@@ -68,9 +68,6 @@ namespace Services.Window
                 _windows.Add(window);
                 AddHudWindows(window);
             }
-            
-            Debug.Log(_windows.Count);
-            Debug.Log(_hudWindows.Count);
         }
 
         private void AddHudWindows(UI.Window window)
