@@ -2,8 +2,13 @@
 
 namespace Gameplay.Enemy
 {
+    [RequireComponent(typeof(EnemyAttacker), typeof(EnemyMovement))]
     public class EnemyStateMachine : MonoBehaviour
     {
+        private readonly float _attackDistance = 0.5f;
+        private readonly float _initalChaseDistance = 1f;
+        private readonly float _finalChaseDistance = 3f;
+        
         private EnemyAttacker _enemyAttacker;
         private EnemyMovement _enemyMovement;
 
@@ -26,11 +31,11 @@ namespace Gameplay.Enemy
             
             float distance = Vector3.Distance(transform.position, Player.transform.position);
 
-            if (distance < 0.5f)
+            if (distance < _attackDistance)
             {
                 StartCoroutine(AttackWithDelay());
             }
-            else if (distance >= 1f && distance <= 3f)
+            else if (distance >= _initalChaseDistance && distance <= _finalChaseDistance)
             {
                 Vector3 direction = Player.transform.position - transform.position;
                 _enemyMovement.Move(direction.normalized);

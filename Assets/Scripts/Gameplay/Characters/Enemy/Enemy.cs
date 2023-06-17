@@ -1,11 +1,8 @@
-using System;
-using Gameplay.Health;
 using UnityEngine;
 
 namespace Gameplay.Enemy
 {
-    [RequireComponent(typeof(EnemyDestruction))]
-    public class Enemy : Character, IDamageable
+    public class Enemy : Character
     {
         [SerializeField] private int _healthValue;
 

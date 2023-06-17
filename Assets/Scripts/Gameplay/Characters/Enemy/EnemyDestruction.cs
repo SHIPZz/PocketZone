@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Gameplay.Enemy
 {
+    [RequireComponent(typeof(Enemy))]
     public class EnemyDestruction : MonoBehaviour
     {
         public event Action<Vector3> Destroyed;

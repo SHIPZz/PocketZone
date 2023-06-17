@@ -9,7 +9,7 @@ namespace UI
     public class BulletQuantityMediator : MonoBehaviour
     {
         private WeaponSelectorHandler _weaponSelectorHandler;
-        private Dictionary<Weapon, int> _bulletQuantities;
+        private Dictionary<Weapon, int> _bulletQuantities = new Dictionary<Weapon, int>();
         private BulletQuantityText _bulletQuantityText;
 
         private void Awake()
@@ -19,8 +19,6 @@ namespace UI
 
         private void Start()
         {
-            _bulletQuantities = new Dictionary<Weapon, int>();
-
             foreach (var weapon in WeaponDatabase.Values)
             {
                 weapon.BulletsChanged += OnBulletsChanged;

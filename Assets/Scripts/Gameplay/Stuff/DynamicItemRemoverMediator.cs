@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 namespace UI
 {
+    [RequireComponent(typeof(DynamicItemInput))]
     public class DynamicItemRemoverMediator : MonoBehaviour
     {
         [SerializeField] private Button _removeButton;

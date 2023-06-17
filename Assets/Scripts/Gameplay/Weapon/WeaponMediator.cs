@@ -5,12 +5,13 @@ using UnityEngine;
 
 namespace Gameplay.Weapon
 {
+    [RequireComponent(typeof(WeaponSelectorHandler))]
     public class WeaponMediator : MonoBehaviour
     {
         private PlayerAttacker _playerAttacker;
         private WeaponSelectorHandler _weaponSelectorHandler;
         private Weapon _weapon;
-        
+
         private int _count;
 
         private void Awake()
@@ -23,30 +24,19 @@ namespace Gameplay.Weapon
         private void Start()
         {
             _count = _weapon.BulletQuantity;
-            _playerAttacker.Detected += OnDetected;
             _weaponSelectorHandler.ChoosedWeapon += SetWeapon;
         }
 
-        private void OnDisable()
-        {
+        private void OnDisable() =>
             _weaponSelectorHandler.ChoosedWeapon -= SetWeapon;
-            _playerAttacker.Detected -= OnDetected;
-        }
-        
-        private void OnDetected(Vector3 direction)
-        {
-            // _weapon.Shoot(direction);
-        }
 
-        private void BulletQuantityChanged(int count)
-        {
+        private void BulletQuantityChanged(int count) =>
             _count = count;
-        }
 
         private void SetWeapon(Weapon weapon) =>
-            _weapon = weapon;
-        
+                _weapon = weapon;
+
         public void SetPlayerAttacker(PlayerAttacker playerAttacker) =>
-            _playerAttacker = playerAttacker;
+                _playerAttacker = playerAttacker;
     }
 }

@@ -8,20 +8,14 @@ namespace UI
     [RequireComponent(typeof(TextMeshProUGUI))]
     public class BulletQuantityText : MonoBehaviour
     {
-        public TextMeshProUGUI Text { get; private set; }
-        public Weapon Weapon { get; set; }
+        private TextMeshProUGUI _text;
 
         private void Awake()
         {
-            Text = GetComponent<TextMeshProUGUI>();
-        }
-
-        private void Update()
-        {
-            // Text.text = Weapon.BulletQuantity.ToString();
+            _text = GetComponent<TextMeshProUGUI>();
         }
 
         public void Set(int count) =>
-            Text.text = count.ToString();
+            _text.text = count.ToString();
     }
 }

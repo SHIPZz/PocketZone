@@ -56,8 +56,6 @@ namespace Services
             {
                 GameObject healthbarPrefab = _uiCreator.CreateHealthbar(character);
                 healthbarPrefab.transform.SetParent(WindowDatabase.Get(WindowTypeId.Health).gameObject.transform);
-                // Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
-                // healthbarPrefab.transform.position = screenPos + new Vector3(0,2,0);
             }
         }
     }

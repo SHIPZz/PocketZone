@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UI;
-using UnityEngine;
 
 public class Inventory
 {
-    public event Action<Item> OnItemAdded;
-    public event Action<Item> OnItemRemoved;
-    
     private readonly List<Cell> _cells = new List<Cell>();
     private int _count;
 
@@ -29,9 +24,7 @@ public class Inventory
         {
             var cell = new Cell(item, 1);
             _cells.Add(cell);
-        } 
-        
-        // OnItemAdded?.Invoke(item);
+        }
     }
 
     public void RemoveItem(Item item)
@@ -51,8 +44,6 @@ public class Inventory
                 break;
             }
         }
-        
-        // OnItemRemoved?.Invoke(item);
     }
 
 }

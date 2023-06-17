@@ -29,6 +29,8 @@ namespace Gameplay.Weapon
             _fireTimer += Time.deltaTime;
         }
 
+        public abstract GameObject CreateBullet(Vector3 direction);
+        
         public void Shoot(Vector3 targetPosition)
         {
             BulletQuantity--;
@@ -59,20 +61,20 @@ namespace Gameplay.Weapon
             return false;
         }
 
+
+        
+        public void Reload()
+        {
+            BulletQuantity = _initalBulletQuantity;
+            BulletsChanged?.Invoke(BulletQuantity, this);
+        }
+        
         private Vector3 Direction(Vector3 targetPosition)
         {
             var heading = targetPosition - ShootPoint.position;
             var distance = heading.magnitude;
             var direction = heading / distance;
             return direction;
-        }
-
-        public abstract GameObject CreateBullet(Vector3 direction);
-        
-        public void Reload()
-        {
-            BulletQuantity = _initalBulletQuantity;
-            BulletsChanged?.Invoke(BulletQuantity, this);
         }
     }
 }

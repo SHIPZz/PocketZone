@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 namespace UI
 {
+    [RequireComponent(typeof(Button))]
     public class DynamicItemInput : MonoBehaviour
     {
         public event Action<DynamicItem> Clicked;

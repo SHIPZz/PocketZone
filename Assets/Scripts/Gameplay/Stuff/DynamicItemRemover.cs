@@ -5,7 +5,7 @@ namespace Gameplay.Stuff
 {
     public class DynamicItemRemover
     {
-        private InventoryPresenter _inventoryPresenter;
+        private readonly InventoryPresenter _inventoryPresenter;
 
         public DynamicItemRemover(InventoryPresenter inventoryPresenter)
         {

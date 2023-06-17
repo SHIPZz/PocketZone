@@ -22,7 +22,6 @@ namespace GameInit
             _gameFactory = ServiceLocator.Get<GameFactory>();
             _windowService = ServiceLocator.Get<WindowService>();
             MainUI =  CreateMainUI();
-            // CreateInventory();
         }
 
         public GameObject CreateHealthbar(Gameplay.Character character)
@@ -37,28 +36,6 @@ namespace GameInit
         private MainUI CreateMainUI()
         {
             return _gameFactory.CreateObject(AssetPath.UIPrefab).GetComponent<MainUI>();
-        }
-        
-        private GameObject CreateInventoryWindow()
-        {
-            var inventoryWindow = _gameFactory.CreateObject(AssetPath.InventoryPrefab);
-            inventoryWindow.SetActive(false);
-            var window = inventoryWindow.GetComponent<UI.Window>();
-            // window.WindowTypeId = WindowTypeId.Inventory;
-            // _windowService.FillList(window);
-            
-            return inventoryWindow;
-        }
-
-        private GameObject CreateInputWindow()
-        {
-            var inputWindow = _gameFactory.CreateObject(AssetPath.InputCanvasPrefab);
-            inputWindow.SetActive(false);
-            var window = inputWindow.GetComponent<UI.Window>();
-            // window.WindowTypeId = WindowTypeId.Input;
-            // _windowService.FillList(window);
-
-            return inputWindow;
         }
     }
 }
